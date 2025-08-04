@@ -1,0 +1,148 @@
+
+<!doctype html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Required meta tags -->
+      <title>Artical Details</title>
+      <!-- css link -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/fontawesome-all-min.css" rel="stylesheet">
+      <link href="css/slick.css" rel="stylesheet" type="text/css">
+      <link href="css/slick-theme.css" rel="stylesheet" type="text/css">
+      <link href="css/custom.css" rel="stylesheet" type="text/css">
+      <!-- js link -->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/slick.min.js"></script>
+      <script src="js/font-awesome-all.min.js"></script>
+      <script src="js/custom.js"></script>
+   </head>
+   <body>
+      <!-- header section start -->
+      <header class="header__main">
+         <div class="header-inner__wrapper">
+            <div class="container">
+               <div class="header-row d-flex align-items-center justify-content-between">
+                  <div class="logo-wrap"><a href="index.html"><img src="images/site-logo.svg" alt=""></a></div>
+                  <div class="desktop-menu">
+                     <ul class="nav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Founder</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li class="current-menu-item"><a href="#">Companies</a></li>
+                        <li class="menu-item-has-children">
+                           <a href="#">Insights</a>
+                           <ul class="sub-menu">
+                              <li><a href="#">Our Articles</a></li>
+                              <li><a href="#">Our Podcasts</a></li>
+                              <li><a href="#">Our Videos</a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="right-col d-flex align-items-center">
+                     <div class="buttom-wrap">
+                        <a href="#" class="button__primary"><span>Contact Us</span></a>
+                     </div>
+                     <div class="hamburger-nav">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="mobile-menu">
+            <div class="top-row d-flex align-items-center justify-content-between">
+               <div class="logo-wrap"><a href="#"><img src="images/site-logo-white.svg" alt=""></a></div>
+               <div class="hamburger-nav-close">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+               </div>
+            </div>
+            <div class="mobile-menubar">
+               <ul>
+                  <li class="current-menu-item"><a href="#">Home</a></li>
+                  <li><a href="#">Founder</a></li>
+                  <li><a href="#">Team</a></li>
+                  <li><a href="#">Companies</a></li>
+                  <li class="menu-item-has-children">
+                     <a href="#">Insights</a>
+                     <ul class="sub-menu">
+                        <li><a href="#">Our Articles</a></li>
+                        <li><a href="#">Our Podcasts</a></li>
+                        <li><a href="#">Our Videos</a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </header>
+      
+      <!-- header section end -->
+      <!-- body section start -->
+      <main>
+         <section class="details-section padding-common">
+            <div class="container">
+               <div class="details-inner">
+                  <div class="title-wrap text-center">
+                     <ul class="d-flex justify-content-center align-items-center">
+                        <li>Jan 13, 2025</li>
+                        <li>John Anderson</li>
+                     </ul>
+                     <h1>Quantum Leap?</h1>
+                  </div>
+                  <div class="image-wraper image-adjustment">
+                     <img src="images/details-image.jpg" alt="">
+                  </div>
+                  <div class="details-info">
+                     <h3>Disentangling fact from fiction in bitcoin and quantum computing</h3>
+                     <p>Author’s Note: This piece is intended to be an approachable summary for mainstream readers and capital allocators evaluating bitcoin, and it may be updated over time as new technological advancements are made. We would like to thank Adam Back and Hunter Beast for their technical review and feedback.</p>
+                     <p>As the largest investment platform focused on bitcoin, we field questions about bitcoin every day, and there are a handful of concerns that are common to almost everyone exploring the space. Most of these have been pretty clearly addressed just by the natural course of history; for example, every year that bitcoin maintains its massive lead in network effects, resilience, and value accrual relative to the rest of “crypto,” it’s progressively clearer why bitcoin can’t be easily copied or outcompeted, and every failed government ban of bitcoin – or more recently, various governments’ pivots to embracing bitcoin – only further cement why “the government will ban it” isn’t a strong bear case. But one long-running concern we frequently hear that is harder to quickly dispel at this point in bitcoin’s history is the potential for advances in quantum computing to eventually compromise bitcoin security in some critical way. </p>
+                     <p>This concern has recently been in focus once again thanks to the announcement of Willow, Google’s newest quantum computing chip. The Willow chip represents a noteworthy step forward in the decades-long process of building a quantum computer that can eventually perform practical applications like compromising the public-key cryptography securing many systems including bitcoin, so its arrival has predictably inspired the latest round of bitcoin obituaries. However, while Willow shows impressive progress on some key dimensions, the journey toward a cryptanalytically relevant quantum computer (“CRQC”) – that is, a quantum computer that can threaten modern cryptography – remains in its infancy with many massive hurdles still to overcome, and recent updates are unlikely to alter existing timelines for quantum computing development. Meanwhile, this issue is far from unknown to bitcoin developers, and a variety of potential mitigating solutions are already available today. All the same, the progress of quantum computing could certainly accelerate from here, so it’s worth developing a clear idea of how a sufficiently scaled quantum computer could ultimately affect bitcoin and how the network might be able to respond. </p>
+                     <h3>Some Very Brief Background</h3>
+                     <p>Before diving in, it may be helpful to briefly review some key premises built into most modern digital security systems, including (but not limited to) bitcoin. Modern cryptographic security relies on various forms of assumed “computational hardness” – that is, the assumption that certain math problems are complex enough to be effectively infeasible for conventional computers. One example is the discrete log problem, which posits in simplest terms that it is extremely difficult to determine the solution to logb(a) when a and b are very large prime numbers.¹ Application of this problem to an elliptic curve allows for elliptic curve cryptography, an iteration of which underpins the generation of bitcoin’s public/private key pairs and the signature algorithm used for most bitcoin transactions (Elliptic Curve Digital Signature Algorithm, or ECDSA). This system rests on the fundamental asymmetry of “one-way functions”: it is trivial to produce and validate a signature for a public key (a particular point somewhere on the elliptic curve) if its private key (a randomly generated value) is known, but the discrete log problem makes it prohibitively difficult to reverse-engineer that same private key if only the public key is known.</p>
+                     <p>This problem is difficult enough that there is no better approach for classical computers than guessing and checking many potential solutions for the private key – also known as “brute forcing” – but this is still practically infeasible even for the most advanced conventional supercomputer. Since a bitcoin private key is a 256-bit number, there are 2^256 or approximately 1.1 x 10^77 possible alphanumeric combinations in bitcoin’s keyspace, a figure roughly comparable to the number of atoms in the entire observable universe.² For the best known conventional algorithms, the difficulty of breaking a 256-bit key is the square root of the keyspace size (2^128 in this case),³ so if the world’s fastest conventional supercomputer were to focus solely on cracking a single bitcoin private key, it would need roughly 2 x 10^20 seconds, or 6.2 trillion years. For those keeping score at home, that would amount to ~450x longer than even the estimated age of the universe (~13.8 billion years).⁴ A graphic from Jameson Lopp may help to illustrate the scale we’re dealing with:</p>
+                     <div class="image-wraper image-adjustment">
+                        <img src="images/details-image-2.jpg" alt="">
+                     </div>
+                     <h3>Putting Concerns in Context</h3>
+                     <p>Google’s Willow clearly represents a noteworthy milestone in the long history of quantum computing and has understandably reignited concerns about existing cryptographic systems like bitcoin that secure the world’s data and financial assets. That said, before prematurely declaring bitcoin dead yet again, it’s important to properly frame the actual impact of the announcement and its potential implications. </p>
+                     <p>This is not a new concern. Anyone not following either bitcoin or quantum computing closely may be tempted toward a kneejerk view that Willow represents a previously undiscovered vulnerability to cybersecurity. But contrary to recent headlines in outlets like the Wall Street Journal which bizarrely claim that quantum computing has not been on anyone’s radar until now, this issue has been deeply analyzed by bitcoin enthusiasts for over a decade. The question of quantum computing was discussed in depth on bitcointalk.org at least as early as 2010, with specific discussion about vulnerabilities in bitcoin signatures as early as 2012. (As an aside, this is a good example of the rule of thumb that any concern one may have about bitcoin was already discussed at length on bitcoin web forums over 10 years ago.) More broadly, this risk is something cryptography experts well beyond bitcoin have been considering for decades, and there are already several quantum-resistant cryptography implementations available for deployment in bitcoin and elsewhere (discussed in greater depth below). </p>
+                  </div>
+               </div>
+               
+            </div>
+         </section>
+      </main>
+      <!-- body section end -->
+      <!-- footer section end -->
+      <footer class="main-footer">
+         <div class="container">
+            <div class="top-footer padding-common">
+               <div class="footer-row d-flex flex-wrap align-items-center justify-content-between">
+                  <div class="logo-wrap"><a href="#"><img src="images/site-logo-white.svg" alt=""></a></div>
+                  <div class="footer-menu">
+                     <ul class="nav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Companies</a></li>
+                        <li><a href="#">Insights</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="bottom-footer text-center position-relative">
+               <p>© 2024 RORHRO Ventures. All rights reserved.</p>
+            </div>
+         </div>
+      </footer>
+      <!-- footer section end -->
+   </body>
+</html>
