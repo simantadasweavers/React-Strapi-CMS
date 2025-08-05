@@ -34,6 +34,11 @@
       "type": "component",
       "component": "shared.slider-texts",
       "repeatable": true
+    },
+    "About_Section": {
+      "type": "component",
+      "component": "shared.about-section",
+      "repeatable": false
     }
   }
 }
