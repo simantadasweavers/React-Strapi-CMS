@@ -12,8 +12,8 @@ export const Home = () => {
                     <div class="container">
                         <div class="info-wraper text-center position-relative">
                             <h1>Empowering Growth. <span>Transforming</span></h1>
-                            <div class="banner-lightning"><img src="images/banner-lightning.png" alt="" /></div>
-                            <div class="man-image"><img src="images/laptop-man.png" alt="" /></div>
+                            <div class="banner-lightning"><img src="src/assets/images/banner-lightning.png" alt="" /></div>
+                            <div class="man-image"><img src="src/assets/images/laptop-man.png" alt="" /></div>
                         </div>
                         <div class="slider-wraper">
                             <div class="marquee-slider">

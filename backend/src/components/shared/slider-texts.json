@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_slider_texts",
+  "info": {
+    "displayName": "Slider Texts"
+  },
+  "options": {},
+  "attributes": {
+    "Slide_Text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
