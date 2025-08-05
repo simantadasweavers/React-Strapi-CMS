@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_shared_choose_rorho_sections",
+  "info": {
+    "displayName": "Choose Rorho Section"
+  },
+  "options": {},
+  "attributes": {
+    "Section_Title": {
+      "type": "string"
+    },
+    "Short_Description": {
+      "type": "text"
+    },
+    "Button_Title": {
+      "type": "string"
+    },
+    "Button_Url": {
+      "type": "string"
+    },
+    "Boxes": {
+      "type": "component",
+      "component": "shared.venture-boxes",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_positive_lists",
+  "info": {
+    "displayName": "Positive List"
+  },
+  "options": {},
+  "attributes": {
+    "List_Item": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

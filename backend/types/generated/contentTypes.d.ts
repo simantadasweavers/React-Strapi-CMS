@@ -550,20 +550,38 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
   };
   attributes: {
     About_Section: Schema.Attribute.Component<'shared.about-section', false>;
+    Choose_Rorho_Ventures: Schema.Attribute.Component<
+      'shared.choose-rorho-section',
+      false
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    Help_Section: Schema.Attribute.Component<'shared.help-section', false>;
     Hero_Section_Text: Schema.Attribute.String;
+    Investments: Schema.Attribute.Component<
+      'shared.investments-section',
+      false
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::home-page.home-page'
     > &
       Schema.Attribute.Private;
+    Page_Title: Schema.Attribute.String;
+    Process_Section: Schema.Attribute.Component<
+      'shared.our-process-section',
+      false
+    >;
     publishedAt: Schema.Attribute.DateTime;
     Right_Float_Image: Schema.Attribute.Media<'images' | 'files'>;
     Side_Left_Arrow_Image: Schema.Attribute.Media<'images' | 'files'>;
     Slider_Texts: Schema.Attribute.Component<'shared.slider-texts', true>;
+    Testimonials: Schema.Attribute.Component<
+      'shared.testimonial-section',
+      false
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_venture_boxes",
+  "info": {
+    "displayName": "Venture Boxes"
+  },
+  "options": {},
+  "attributes": {
+    "Box_Image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "Box_Text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

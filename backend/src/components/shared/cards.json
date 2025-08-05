@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_shared_cards",
+  "info": {
+    "displayName": "Cards"
+  },
+  "options": {},
+  "attributes": {
+    "Company_Logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "Client": {
+      "type": "string"
+    },
+    "Client_Designation": {
+      "type": "string"
+    },
+    "Feedback": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

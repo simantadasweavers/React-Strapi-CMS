@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_process_boxes",
+  "info": {
+    "displayName": "Process Boxes"
+  },
+  "options": {},
+  "attributes": {
+    "Box_Text": {
+      "type": "string"
+    },
+    "Box_Time": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

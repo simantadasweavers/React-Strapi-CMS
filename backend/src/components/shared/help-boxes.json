@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_help_boxes",
+  "info": {
+    "displayName": "Help Boxes"
+  },
+  "options": {},
+  "attributes": {
+    "Box_Title": {
+      "type": "string"
+    },
+    "Short_Description": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

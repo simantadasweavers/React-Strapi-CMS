@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_negative_lists",
+  "info": {
+    "displayName": "Negative List"
+  },
+  "options": {},
+  "attributes": {
+    "List_Item": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_shared_investment_boxes",
+  "info": {
+    "displayName": "Investment Boxes"
+  },
+  "options": {},
+  "attributes": {
+    "Box_Image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "Box_Title": {
+      "type": "string",
+      "required": true
+    },
+    "Positive_List": {
+      "type": "component",
+      "component": "shared.positive-list",
+      "repeatable": true
+    },
+    "Negative_List": {
+      "type": "component",
+      "component": "shared.negative-list",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

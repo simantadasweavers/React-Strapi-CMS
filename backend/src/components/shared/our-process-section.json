@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_our_process_sections",
+  "info": {
+    "displayName": "Our Process Section"
+  },
+  "options": {},
+  "attributes": {
+    "Section_Title": {
+      "type": "string"
+    },
+    "Process_Lists": {
+      "type": "component",
+      "component": "shared.list",
+      "repeatable": true
+    },
+    "Process_Boxes": {
+      "type": "component",
+      "component": "shared.process-boxes",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

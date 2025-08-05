@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_shared_investments_sections",
+  "info": {
+    "displayName": "Investments Section"
+  },
+  "options": {},
+  "attributes": {
+    "Section_Title": {
+      "type": "string"
+    },
+    "Boxes": {
+      "type": "component",
+      "component": "shared.investment-boxes",
+      "repeatable": true
+    },
+    "Button_Title": {
+      "type": "string"
+    },
+    "Button_Url": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_shared_help_sections",
+  "info": {
+    "displayName": "Help Section"
+  },
+  "options": {},
+  "attributes": {
+    "Section_Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Button_Title": {
+      "type": "string"
+    },
+    "Button_Link": {
+      "type": "string"
+    },
+    "Help_Boxes": {
+      "type": "component",
+      "component": "shared.help-boxes",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
