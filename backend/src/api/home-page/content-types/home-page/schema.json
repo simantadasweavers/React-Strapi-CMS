@@ -12,31 +12,13 @@
   "pluginOptions": {},
   "attributes": {
     "Page_Title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
-    "Hero_Section_Text": {
-      "type": "string"
-    },
-    "Side_Left_Arrow_Image": {
-      "type": "media",
-      "multiple": false,
-      "allowedTypes": [
-        "images",
-        "files"
-      ]
-    },
-    "Right_Float_Image": {
-      "type": "media",
-      "multiple": false,
-      "allowedTypes": [
-        "images",
-        "files"
-      ]
-    },
-    "Slider_Texts": {
+    "Hero_Section": {
       "type": "component",
-      "component": "shared.slider-texts",
-      "repeatable": true
+      "component": "shared.hero-section",
+      "repeatable": false
     },
     "About_Section": {
       "type": "component",

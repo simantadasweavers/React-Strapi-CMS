@@ -64,6 +64,19 @@ export interface SharedHelpSection extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedHeroSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_hero_sections';
+  info: {
+    displayName: 'Hero Section';
+  };
+  attributes: {
+    Hero_Section_Text: Schema.Attribute.String;
+    Right_Float_Image: Schema.Attribute.Media<'images' | 'files'>;
+    Side_Left_Arrow_Image: Schema.Attribute.Media<'images' | 'files'>;
+    Slider: Schema.Attribute.Component<'shared.slider-texts', true>;
+  };
+}
+
 export interface SharedInvestmentBoxes extends Struct.ComponentSchema {
   collectionName: 'components_shared_investment_boxes';
   info: {
@@ -211,7 +224,7 @@ export interface SharedSliderTexts extends Struct.ComponentSchema {
     displayName: 'Slider Texts';
   };
   attributes: {
-    Slide_Text: Schema.Attribute.String;
+    Text: Schema.Attribute.String;
   };
 }
 
@@ -245,6 +258,7 @@ declare module '@strapi/strapi' {
       'shared.choose-rorho-section': SharedChooseRorhoSection;
       'shared.help-boxes': SharedHelpBoxes;
       'shared.help-section': SharedHelpSection;
+      'shared.hero-section': SharedHeroSection;
       'shared.investment-boxes': SharedInvestmentBoxes;
       'shared.investments-section': SharedInvestmentsSection;
       'shared.list': SharedList;

@@ -558,7 +558,7 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     Help_Section: Schema.Attribute.Component<'shared.help-section', false>;
-    Hero_Section_Text: Schema.Attribute.String;
+    Hero_Section: Schema.Attribute.Component<'shared.hero-section', false>;
     Investments: Schema.Attribute.Component<
       'shared.investments-section',
       false
@@ -569,15 +569,12 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
       'api::home-page.home-page'
     > &
       Schema.Attribute.Private;
-    Page_Title: Schema.Attribute.String;
+    Page_Title: Schema.Attribute.String & Schema.Attribute.Required;
     Process_Section: Schema.Attribute.Component<
       'shared.our-process-section',
       false
     >;
     publishedAt: Schema.Attribute.DateTime;
-    Right_Float_Image: Schema.Attribute.Media<'images' | 'files'>;
-    Side_Left_Arrow_Image: Schema.Attribute.Media<'images' | 'files'>;
-    Slider_Texts: Schema.Attribute.Component<'shared.slider-texts', true>;
     Testimonials: Schema.Attribute.Component<
       'shared.testimonial-section',
       false

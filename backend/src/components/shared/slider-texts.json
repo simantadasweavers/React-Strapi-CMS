@@ -5,7 +5,7 @@
   },
   "options": {},
   "attributes": {
-    "Slide_Text": {
+    "Text": {
       "type": "string"
     }
   },
