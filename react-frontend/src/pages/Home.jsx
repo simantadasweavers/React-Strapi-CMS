@@ -1,19 +1,37 @@
 import { Header } from "../components/Header"
 import { Footer } from "../components/Footer"
-
+import axios from "../Auth/Axios"
+import { useEffect, useState } from "react"
 
 export const Home = () => {
+
+    const [data, setData] = useState({});
+    const URL = import.meta.env.VITE_STRAPI_BACKEND_URL;
+    const No_image_url = "src/assets/images/no_image.jpg"
+    useEffect(() => {
+        axios({
+            method: 'GET',
+            url: `${import.meta.env.VITE_STRAPI_BACKEND_URL}/api/home-page?populate[0]=Hero_Section.Right_Float_Image&populate[1]=Hero_Section.Side_Left_Arrow_Image&populate[2]=Hero_Section.Slider&populate[3]=About_Section&populate[4]=Choose_Rorho_Ventures.Boxes.Box_Image&populate[5]=Process_Section.Process_Lists&populate[6]=Process_Section.Process_Boxes&populate[7]=Investments.Boxes&populate[8]=Investments.Boxes.Box_Image&populate[9]=Help_Section.Help_Boxes&populate[10]=Testimonials.Client_Reviews.Company_Logo`,
+        }).then((res) => {
+            setData(res.data.data);
+        }).catch((err) => {
+            console.error(err);
+        })
+    }, [])
+
+
     return (
         <>
             <Header />
 
+    
             <main>
                 <section class="hero-section padding-common light-bg">
                     <div class="container">
                         <div class="info-wraper text-center position-relative">
-                            <h1>Empowering Growth. <span>Transforming</span></h1>
-                            <div class="banner-lightning"><img src="src/assets/images/banner-lightning.png" alt="" /></div>
-                            <div class="man-image"><img src="src/assets/images/laptop-man.png" alt="" /></div>
+                            <h1>{data ? data.Hero_Section.Hero_Section_Text : ''}</h1>
+                            <div class="banner-lightning"><img src={data ? URL + data.Hero_Section.Side_Left_Arrow_Image.url : ''} alt="" /></div>
+                            <div class="man-image"><img src={data ? URL + data.Hero_Section.Right_Float_Image.url : ''} alt="" /></div>
                         </div>
                         <div class="slider-wraper">
                             <div class="marquee-slider">
@@ -89,7 +107,7 @@ export const Home = () => {
                                     <div class="why-Choose-box">
                                         <div class="number-wrap">02</div>
                                         <div class="image-outer text-center">
-                                            <div class="image-wrap"><img src="images/why-Choose-box-2.png" alt=""/></div>
+                                            <div class="image-wrap"><img src="images/why-Choose-box-2.png" alt="" /></div>
                                         </div>
                                         <div class="why-Choose-box-title">
                                             <h3>Streamlined process for business acquisition.</h3>
@@ -100,7 +118,7 @@ export const Home = () => {
                                     <div class="why-Choose-box">
                                         <div class="number-wrap">03</div>
                                         <div class="image-outer text-center">
-                                            <div class="image-wrap"><img src="images/why-Choose-box-3.png" alt=""/></div>
+                                            <div class="image-wrap"><img src="images/why-Choose-box-3.png" alt="" /></div>
                                         </div>
                                         <div class="why-Choose-box-title">
                                             <h3>Expert team with decades of experience.</h3>
@@ -168,7 +186,7 @@ export const Home = () => {
                             <div class="row justify-content-center">
                                 <div class="col-lg-4 col-md-6 investments-box-col">
                                     <div class="investments-box">
-                                        <div class="icon-wrap"><img src="images/investments-icon-1.png" alt=""/></div>
+                                        <div class="icon-wrap"><img src="images/investments-icon-1.png" alt="" /></div>
                                         <div class="list-item">
                                             <h3>Venture Capital</h3>
                                             <ul>
@@ -185,7 +203,7 @@ export const Home = () => {
                                 </div>
                                 <div class="col-lg-4 col-md-6 investments-box-col">
                                     <div class="investments-box">
-                                        <div class="icon-wrap"><img src="images/investments-icon-2.png" alt=""/></div>
+                                        <div class="icon-wrap"><img src="images/investments-icon-2.png" alt="" /></div>
                                         <div class="list-item">
                                             <h3>Private Equity</h3>
                                             <ul>
@@ -201,7 +219,7 @@ export const Home = () => {
                                 </div>
                                 <div class="col-lg-4 col-md-6 investments-box-col">
                                     <div class="investments-box">
-                                        <div class="icon-wrap"><img src="images/investments-icon-3.png" alt=""/></div>
+                                        <div class="icon-wrap"><img src="images/investments-icon-3.png" alt="" /></div>
                                         <div class="list-item">
                                             <h3>RORHRO Ventures</h3>
                                             <ul>
@@ -245,7 +263,7 @@ export const Home = () => {
                                     <div class="help-box">
                                         <div class="title-wrap">
                                             <div class="number"><p>01</p></div>
-                                            <h3>High <br/> margins</h3>
+                                            <h3>High <br /> margins</h3>
                                         </div>
                                         <div class="description-wrap">
                                             <p>The generated Lorem Ipsum is therefore always free from repetition, injected humour.</p>
@@ -278,7 +296,7 @@ export const Home = () => {
                                     <div class="help-box">
                                         <div class="title-wrap">
                                             <div class="number"><p>04</p></div>
-                                            <h3>Healthy <br/> Profit</h3>
+                                            <h3>Healthy <br /> Profit</h3>
                                         </div>
                                         <div class="description-wrap">
                                             <p>The generated Lorem Ipsum is therefore always free from repetition, injected humour.</p>
@@ -339,7 +357,7 @@ export const Home = () => {
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="review-wraper">
-                                                        <div class="logo-wrap"><img src="images/company-logo.svg" alt=""/></div>
+                                                        <div class="logo-wrap"><img src="images/company-logo.svg" alt="" /></div>
                                                         <div class="profile-info">
                                                             <h3>Pádraig Ó Cinnéide</h3>
                                                             <p>Founder of Castro</p>
@@ -348,7 +366,7 @@ export const Home = () => {
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <div class="image-wraper image-adjustment"><img src="images/testimonial-slider.jpg" alt=""/></div>
+                                                    <div class="image-wraper image-adjustment"><img src="images/testimonial-slider.jpg" alt="" /></div>
                                                 </div>
                                             </div>
                                         </div>

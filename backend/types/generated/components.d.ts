@@ -39,6 +39,31 @@ export interface SharedChooseRorhoSection extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedFooterSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_footer_sections';
+  info: {
+    displayName: 'Footer Section';
+  };
+  attributes: {
+    Copyright_Text: Schema.Attribute.String;
+    Footer_Image: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+  };
+}
+
+export interface SharedHeaderSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_header_sections';
+  info: {
+    displayName: 'Header Section';
+  };
+  attributes: {
+    Button_Title: Schema.Attribute.String;
+    Button_Url: Schema.Attribute.String;
+    Header_Image: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+  };
+}
+
 export interface SharedHelpBoxes extends Struct.ComponentSchema {
   collectionName: 'components_shared_help_boxes';
   info: {
@@ -200,8 +225,10 @@ export interface SharedSeo extends Struct.ComponentSchema {
     name: 'Seo';
   };
   attributes: {
-    metaDescription: Schema.Attribute.Text & Schema.Attribute.Required;
-    metaTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    Meta_Author: Schema.Attribute.String;
+    Meta_Description: Schema.Attribute.Text & Schema.Attribute.Required;
+    Meta_Keywords: Schema.Attribute.Text;
+    Meta_Title: Schema.Attribute.String & Schema.Attribute.Required;
     shareImage: Schema.Attribute.Media<'images'>;
   };
 }
@@ -256,6 +283,8 @@ declare module '@strapi/strapi' {
       'shared.about-section': SharedAboutSection;
       'shared.cards': SharedCards;
       'shared.choose-rorho-section': SharedChooseRorhoSection;
+      'shared.footer-section': SharedFooterSection;
+      'shared.header-section': SharedHeaderSection;
       'shared.help-boxes': SharedHelpBoxes;
       'shared.help-section': SharedHelpSection;
       'shared.hero-section': SharedHeroSection;

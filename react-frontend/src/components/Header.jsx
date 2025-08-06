@@ -16,7 +16,8 @@ export const Header = () => {
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Founder</a></li>
                         <li><a href="#">Team</a></li>
-                        <li class="current-menu-item"><a href="#">Companies</a></li>
+                        {/* <li class="current-menu-item"><a href="#">Companies</a></li> */}
+                        <li><a href="#">Companies</a></li>
                         <li class="menu-item-has-children">
                            <a href="#">Insights</a>
                            <ul class="sub-menu">

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_footer_sections",
+  "info": {
+    "displayName": "Footer Section"
+  },
+  "options": {},
+  "attributes": {
+    "Footer_Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "Copyright_Text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_header_sections",
+  "info": {
+    "displayName": "Header Section"
+  },
+  "options": {},
+  "attributes": {
+    "Header_Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "Button_Title": {
+      "type": "string"
+    },
+    "Button_Url": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
