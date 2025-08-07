@@ -15,12 +15,15 @@
     "@stripe/stripe-js": "^7.4.0",
     "axios": "^1.10.0",
     "browser-router": "^0.2.0",
+    "html-react-parser": "^5.2.6",
     "jquery": "^3.7.1",
     "owl.carousel": "^2.3.4",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-owl-carousel": "^2.3.3",
     "react-router-dom": "^7.6.3",
+    "react-slick": "^0.31.0",
+    "slick-carousel": "^1.8.1",
     "stripe": "^18.3.0"
   },
   "devDependencies": {

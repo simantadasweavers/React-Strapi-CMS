@@ -13,6 +13,14 @@
         "files"
       ]
     },
+    "Client_Profile": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
     "Client": {
       "type": "string"
     },

@@ -11,6 +11,9 @@
     "Description": {
       "type": "text"
     },
+    "Button_Title": {
+      "type": "string"
+    },
     "Button_Link": {
       "type": "string"
     }

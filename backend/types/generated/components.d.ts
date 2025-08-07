@@ -7,6 +7,7 @@ export interface SharedAboutSection extends Struct.ComponentSchema {
   };
   attributes: {
     Button_Link: Schema.Attribute.String;
+    Button_Title: Schema.Attribute.String;
     Description: Schema.Attribute.Text;
     Section_Title: Schema.Attribute.String;
   };
@@ -20,6 +21,7 @@ export interface SharedCards extends Struct.ComponentSchema {
   attributes: {
     Client: Schema.Attribute.String;
     Client_Designation: Schema.Attribute.String;
+    Client_Profile: Schema.Attribute.Media<'images' | 'files'>;
     Company_Logo: Schema.Attribute.Media<'images' | 'files'>;
     Feedback: Schema.Attribute.Text;
   };
