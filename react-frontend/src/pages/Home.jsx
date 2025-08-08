@@ -249,7 +249,7 @@ export const Home = () => {
                                                                     <h3>{x?.Client ? parse(x.Client) : ''}</h3>
                                                                     <p>{x?.Client_Designation ? parse(x.Client_Designation) : ''}</p>
                                                                 </div>
-                                                                <p>{x?.Feedback ? x.Feedback : ''}</p>
+                                                                <p>{x?.Feedback ? parse(x.Feedback) : ''}</p>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">

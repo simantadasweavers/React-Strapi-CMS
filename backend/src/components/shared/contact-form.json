@@ -1,20 +1,15 @@
 {
-  "collectionName": "components_shared_hero_sections",
+  "collectionName": "components_shared_contact_forms",
   "info": {
-    "displayName": "Hero Section"
+    "displayName": "Contact Form"
   },
   "options": {},
   "attributes": {
-    "Hero_Section_Text": {
+    "Section_Title": {
       "type": "string"
     },
-    "Side_Left_Arrow_Image": {
-      "type": "media",
-      "multiple": false,
-      "allowedTypes": [
-        "images",
-        "files"
-      ]
+    "Short_Description": {
+      "type": "text"
     },
     "Right_Float_Image": {
       "type": "media",
@@ -24,10 +19,13 @@
         "files"
       ]
     },
-    "Slider": {
-      "type": "component",
-      "component": "shared.slider",
-      "repeatable": true
+    "Left_Float_Image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
     }
   },
   "config": {}

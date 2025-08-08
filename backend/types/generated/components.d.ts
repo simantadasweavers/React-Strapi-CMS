@@ -41,6 +41,19 @@ export interface SharedChooseRorhoSection extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedContactForm extends Struct.ComponentSchema {
+  collectionName: 'components_shared_contact_forms';
+  info: {
+    displayName: 'Contact Form';
+  };
+  attributes: {
+    Left_Float_Image: Schema.Attribute.Media<'images' | 'files'>;
+    Right_Float_Image: Schema.Attribute.Media<'images' | 'files'>;
+    Section_Title: Schema.Attribute.String;
+    Short_Description: Schema.Attribute.Text;
+  };
+}
+
 export interface SharedFooterSection extends Struct.ComponentSchema {
   collectionName: 'components_shared_footer_sections';
   info: {
@@ -100,7 +113,7 @@ export interface SharedHeroSection extends Struct.ComponentSchema {
     Hero_Section_Text: Schema.Attribute.String;
     Right_Float_Image: Schema.Attribute.Media<'images' | 'files'>;
     Side_Left_Arrow_Image: Schema.Attribute.Media<'images' | 'files'>;
-    Slider: Schema.Attribute.Component<'shared.slider-texts', true>;
+    Slider: Schema.Attribute.Component<'shared.slider', true>;
   };
 }
 
@@ -243,7 +256,7 @@ export interface SharedSlider extends Struct.ComponentSchema {
     icon: 'address-book';
   };
   attributes: {
-    files: Schema.Attribute.Media<'images', true>;
+    Text: Schema.Attribute.String;
   };
 }
 
@@ -285,6 +298,7 @@ declare module '@strapi/strapi' {
       'shared.about-section': SharedAboutSection;
       'shared.cards': SharedCards;
       'shared.choose-rorho-section': SharedChooseRorhoSection;
+      'shared.contact-form': SharedContactForm;
       'shared.footer-section': SharedFooterSection;
       'shared.header-section': SharedHeaderSection;
       'shared.help-boxes': SharedHelpBoxes;

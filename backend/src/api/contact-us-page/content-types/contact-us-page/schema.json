@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "contact_us_pages",
+  "info": {
+    "singularName": "contact-us-page",
+    "pluralName": "contact-us-pages",
+    "displayName": "Contact Us Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Page_Title": {
+      "type": "string"
+    },
+    "Banner_Section": {
+      "type": "component",
+      "component": "shared.hero-section",
+      "repeatable": false
+    },
+    "Contact_Form_Section": {
+      "type": "component",
+      "component": "shared.contact-form",
+      "repeatable": false
+    }
+  }
+}

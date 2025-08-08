@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contact_requests_requests",
+  "info": {
+    "singularName": "contact-requests",
+    "pluralName": "contact-requests-requests",
+    "displayName": "Contact Requests"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "First_Name": {
+      "type": "string"
+    },
+    "Last_Name": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "email",
+      "required": true
+    },
+    "Phone": {
+      "type": "integer"
+    },
+    "Message": {
+      "type": "text"
+    }
+  }
+}

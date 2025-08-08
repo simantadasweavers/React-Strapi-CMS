@@ -18,3 +18,12 @@ https://docs.strapi.io/cms/api/rest/guides/understanding-populate#:~:text=You%20
 old jquery based html templates should not works perfectly. like slider, effect , animation etc. should be replaced by current npm packages. 
 ```
 
+## header section query
+```
+http://localhost:1337/api/global?populate[0]=Header_Section.Header_Image
+```
+
+## footer section query
+```
+
+```
