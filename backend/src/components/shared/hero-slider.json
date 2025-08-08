@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_hero_sliders",
+  "info": {
+    "displayName": "Hero Slider"
+  },
+  "options": {},
+  "attributes": {
+    "Slide_Text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

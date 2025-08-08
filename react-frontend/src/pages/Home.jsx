@@ -3,6 +3,8 @@ import { Footer } from "../components/Footer"
 import axios from "../Auth/Axios"
 import { useEffect, useState } from "react"
 import parse from 'html-react-parser';
+import { HeroSlider } from "../components/HeroSlider";
+import { Testimonials } from "../components/Testimonials";
 
 
 export const Home = () => {
@@ -42,21 +44,7 @@ export const Home = () => {
                             <div class="man-image"><img src={data?.Hero_Section?.Right_Float_Image?.url ? strapi_url + data.Hero_Section.Right_Float_Image.url : no_image_url} alt="" /></div>
                         </div>
                     </div>
-                    {data?.Hero_Section?.Slider ? data.Hero_Section.Slider.map((x, y) => {
-                        return (
-                            <>
-                                <div className="slider-wraper" key={"slide-" + x.id}>
-                                    <div className="marquee-slider">
-                                        <div className="slider-col">
-                                            <div className="title">
-                                                <p>{parse(x.Text)}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </>
-                        );
-                    }) : ''}
+                    <HeroSlider data={data} />
                 </section>
                 <section class="about-us-section padding-common pb-0" id="border-hit">
                     <div class="container">
@@ -236,7 +224,7 @@ export const Home = () => {
                                 <div class="slider-next-button"></div>
                             </div>
                             <div class="testimonial-slider-wraper">
-                                <div class="testimonial-slider">
+                                {/* <div class="testimonial-slider">
                                     {data?.Testimonials?.Client_Reviews ? data.Testimonials.Client_Reviews.map((x, y) => {
                                         return (
                                             <div class="slider-col">
@@ -262,7 +250,8 @@ export const Home = () => {
                                         )
                                     }) : ''}
 
-                                </div>
+                                </div> */}
+                                <Testimonials data={data} />
                             </div>
                         </div>
                     </div>

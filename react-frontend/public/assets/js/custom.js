@@ -48,34 +48,33 @@ jQuery(document).ready(function () {
   });
 
   // slider-------------------------------------------
-  jQuery('.marquee-slider').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    centerMode: true,
-    centerPadding: '0px',
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 0,
-    speed: 8000,
-    cssEase: 'linear',
-  });
-  jQuery('.testimonial-slider').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    infinite: false,
-    prevArrow: '.slider-prev-button',
-    nextArrow: '.slider-next-button',
-
-    responsive: [
-      {
-        breakpoint: 420,
-        settings: {
-          centerMode: false,
-        }
-      }
-    ]
-  });
+  // jQuery('.marquee-slider').slick({
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   arrows: false,
+  //   centerMode: true,
+  //   centerPadding: '0px',
+  //   infinite: true,
+  //   autoplay: true,
+  //   autoplaySpeed: 0,
+  //   speed: 8000,
+  //   cssEase: 'linear',
+  // });
+  // jQuery('.testimonial-slider').slick({
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   infinite: false,
+  //   prevArrow: '.slider-prev-button',
+  //   nextArrow: '.slider-next-button',
+  //   responsive: [
+  //     {
+  //       breakpoint: 420,
+  //       settings: {
+  //         centerMode: false,
+  //       }
+  //     }
+  //   ]
+  // });
 
   jQuery(window).on('scroll', function () {
     var section2 = jQuery('#border-hit');

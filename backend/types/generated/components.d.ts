@@ -113,7 +113,17 @@ export interface SharedHeroSection extends Struct.ComponentSchema {
     Hero_Section_Text: Schema.Attribute.String;
     Right_Float_Image: Schema.Attribute.Media<'images' | 'files'>;
     Side_Left_Arrow_Image: Schema.Attribute.Media<'images' | 'files'>;
-    Slider: Schema.Attribute.Component<'shared.slider', true>;
+    Slider: Schema.Attribute.Component<'shared.hero-slider', true>;
+  };
+}
+
+export interface SharedHeroSlider extends Struct.ComponentSchema {
+  collectionName: 'components_shared_hero_sliders';
+  info: {
+    displayName: 'Hero Slider';
+  };
+  attributes: {
+    Slide_Text: Schema.Attribute.String;
   };
 }
 
@@ -304,6 +314,7 @@ declare module '@strapi/strapi' {
       'shared.help-boxes': SharedHelpBoxes;
       'shared.help-section': SharedHelpSection;
       'shared.hero-section': SharedHeroSection;
+      'shared.hero-slider': SharedHeroSlider;
       'shared.investment-boxes': SharedInvestmentBoxes;
       'shared.investments-section': SharedInvestmentsSection;
       'shared.list': SharedList;
