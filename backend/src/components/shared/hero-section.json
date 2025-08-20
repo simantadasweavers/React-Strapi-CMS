@@ -8,7 +8,7 @@
     "Hero_Section_Text": {
       "type": "string"
     },
-    "Side_Left_Arrow_Image": {
+    "Right_Float_Image": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [
@@ -16,7 +16,7 @@
         "files"
       ]
     },
-    "Right_Float_Image": {
+    "Side_Left_Arrow_Image": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [
@@ -26,7 +26,7 @@
     },
     "Slider": {
       "type": "component",
-      "component": "shared.hero-slider",
+      "component": "shared.home-slider",
       "repeatable": true
     }
   },

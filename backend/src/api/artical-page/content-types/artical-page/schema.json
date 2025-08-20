@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "artical_pages",
+  "info": {
+    "singularName": "artical-page",
+    "pluralName": "artical-pages",
+    "displayName": "Artical Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Page_Title": {
+      "type": "string"
+    },
+    "Hero_Section": {
+      "type": "component",
+      "component": "shared.inner-page-hero-section",
+      "repeatable": false
+    },
+    "Featured_Article_Title": {
+      "type": "string"
+    }
+  }
+}

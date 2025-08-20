@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "team_pages",
+  "info": {
+    "singularName": "team-page",
+    "pluralName": "team-pages",
+    "displayName": "Team Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Page_Title": {
+      "type": "string"
+    },
+    "Hero": {
+      "type": "component",
+      "component": "shared.hero-section",
+      "repeatable": false
+    },
+    "Members": {
+      "type": "component",
+      "component": "shared.members",
+      "repeatable": true
+    }
+  }
+}

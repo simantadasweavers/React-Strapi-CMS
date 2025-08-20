@@ -23,7 +23,10 @@ old jquery based html templates should not works perfectly. like slider, effect 
 http://localhost:1337/api/global?populate[0]=Header_Section.Header_Image
 ```
 
-## footer section query
+## fetch posts by category
 ```
+http://localhost:1337/api/posts-post?filters[$and][0][category][name][$eq]=videos
 
+and if you want to iterate all then, 
+http://localhost:1337/api/posts-post?filters[$and][0][category][name][$eq]=videos&populate=*
 ```

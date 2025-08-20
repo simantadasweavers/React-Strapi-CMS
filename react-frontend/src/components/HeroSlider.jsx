@@ -26,7 +26,7 @@ export const HeroSlider = ({ data }) => {
                         <div className="slider-wraper" key={"slide-" + x.id}>
                             <div className="slider-col">
                                 <div className="title">
-                                    <p>{parse(x.Slide_Text)}</p>
+                                    <p>{parse(x.Text)}</p>
                                 </div>
                             </div>
                         </div>

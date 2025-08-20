@@ -113,7 +113,7 @@ export interface SharedHeroSection extends Struct.ComponentSchema {
     Hero_Section_Text: Schema.Attribute.String;
     Right_Float_Image: Schema.Attribute.Media<'images' | 'files'>;
     Side_Left_Arrow_Image: Schema.Attribute.Media<'images' | 'files'>;
-    Slider: Schema.Attribute.Component<'shared.hero-slider', true>;
+    Slider: Schema.Attribute.Component<'shared.home-slider', true>;
   };
 }
 
@@ -124,6 +124,29 @@ export interface SharedHeroSlider extends Struct.ComponentSchema {
   };
   attributes: {
     Slide_Text: Schema.Attribute.String;
+  };
+}
+
+export interface SharedHomeSlider extends Struct.ComponentSchema {
+  collectionName: 'components_shared_home_sliders';
+  info: {
+    displayName: 'Home Slider';
+  };
+  attributes: {
+    Text: Schema.Attribute.String;
+  };
+}
+
+export interface SharedInnerPageHeroSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_inner_page_hero_sections';
+  info: {
+    displayName: 'Inner Page Hero Section';
+    icon: 'calendar';
+  };
+  attributes: {
+    Hero_Section_Text: Schema.Attribute.String;
+    Left_Float_Image: Schema.Attribute.Media<'images' | 'files'>;
+    Right_Float_Image: Schema.Attribute.Media<'images' | 'files'>;
   };
 }
 
@@ -171,6 +194,19 @@ export interface SharedMedia extends Struct.ComponentSchema {
   };
   attributes: {
     file: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
+  };
+}
+
+export interface SharedMembers extends Struct.ComponentSchema {
+  collectionName: 'components_shared_members';
+  info: {
+    displayName: 'Members';
+    icon: 'user';
+  };
+  attributes: {
+    Member_Info: Schema.Attribute.Text;
+    Name: Schema.Attribute.String;
+    Profile: Schema.Attribute.Media<'images' | 'files'>;
   };
 }
 
@@ -315,10 +351,13 @@ declare module '@strapi/strapi' {
       'shared.help-section': SharedHelpSection;
       'shared.hero-section': SharedHeroSection;
       'shared.hero-slider': SharedHeroSlider;
+      'shared.home-slider': SharedHomeSlider;
+      'shared.inner-page-hero-section': SharedInnerPageHeroSection;
       'shared.investment-boxes': SharedInvestmentBoxes;
       'shared.investments-section': SharedInvestmentsSection;
       'shared.list': SharedList;
       'shared.media': SharedMedia;
+      'shared.members': SharedMembers;
       'shared.negative-list': SharedNegativeList;
       'shared.our-process-section': SharedOurProcessSection;
       'shared.positive-list': SharedPositiveList;

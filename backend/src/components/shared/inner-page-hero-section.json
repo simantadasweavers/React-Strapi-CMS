@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_shared_inner_page_hero_sections",
+  "info": {
+    "displayName": "Inner Page Hero Section",
+    "icon": "calendar"
+  },
+  "options": {},
+  "attributes": {
+    "Hero_Section_Text": {
+      "type": "string"
+    },
+    "Right_Float_Image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "Left_Float_Image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  },
+  "config": {}
+}

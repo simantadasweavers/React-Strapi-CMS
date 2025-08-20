@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_home_sliders",
+  "info": {
+    "displayName": "Home Slider"
+  },
+  "options": {},
+  "attributes": {
+    "Text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
