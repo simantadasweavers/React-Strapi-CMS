@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "artical_pages",
+  "collectionName": "podcasts_pages",
   "info": {
-    "singularName": "artical-page",
-    "pluralName": "artical-pages",
-    "displayName": "Articals Page"
+    "singularName": "podcasts-page",
+    "pluralName": "podcasts-pages",
+    "displayName": "Podcasts Page"
   },
   "options": {
     "draftAndPublish": true
@@ -19,7 +19,7 @@
       "component": "shared.inner-page-hero-section",
       "repeatable": false
     },
-    "Featured_Article_Title": {
+    "Featured_Podcast_Title": {
       "type": "string"
     }
   }

@@ -51,9 +51,9 @@ export const Articles = () => {
 
   }, [])
 
-  const loadMore = (e) =>{
+  const loadMore = (e) => {
     e.preventDefault();
-    setPostNumber(postnumber+2);
+    setPostNumber(postnumber + 2);
   }
 
   useEffect(() => {
@@ -62,7 +62,7 @@ export const Articles = () => {
         url: `${import.meta.env.VITE_STRAPI_BACKEND_URL}/api/posts-post?filters[$and][0][category][name][$eq]=article&populate=*`,
         method: 'GET',
       });
-      if(postnumber > response.data.data.length){
+      if (postnumber > response.data.data.length) {
         setDisableBtn(false);
       }
       response.data.data.splice(postnumber);
@@ -70,13 +70,14 @@ export const Articles = () => {
     }
     fetchPosts();
   }, [postnumber])
-  
+
 
   return (
     <>
       <Header />
       <main>
-        <section class="inner-banner-section light-bg">
+        {data?.Hero_Section?.Hero_Section_Text ? <>
+          <section class="inner-banner-section light-bg">
           <div class="container">
             <div class="row align-items-center">
               <div class="col-lg-6">
@@ -95,41 +96,47 @@ export const Articles = () => {
             </div>
           </div>
         </section>
-        <section class="featured-section padding-common">
-          <div class="container">
-            <div class="section-title">
-              <h2>{data?.Featured_Article_Title ? data.Featured_Article_Title : ''}</h2>
-            </div>
+        </> : ''}
+        
+        {featured_post.length ? <>
+          <section class="featured-section padding-common">
+            <div class="container">
+              <div class="section-title">
+                <h2>{data?.Featured_Article_Title ? data.Featured_Article_Title : ''}</h2>
+              </div>
 
-            {featured_post.length ? featured_post.map((x, y) => {
-              if (x.Featured_Post) {
-                return (
-                  <div class="row align-items-center">
-                    <div class="col-lg-6">
-                      <div class="image-wrap image-adjustment">
-                        <img src={x?.Featured_Image?.url ? (strapi_url + x.Featured_Image.url) : no_image_url} alt="" />
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="info-wrap">
-                        <div class="date-wrap">
-                          <p>{x?.createdAt ? new Date(x.createdAt).getDate() + "/" + new Date(x.createdAt).getMonth() + "/" + new Date(x.createdAt).getFullYear() : ''}</p>
+              {featured_post.length ? featured_post.map((x, y) => {
+                if (x.Featured_Post) {
+                  return (
+                    <div class="row align-items-center">
+                      <div class="col-lg-6">
+                        <div class="image-wrap image-adjustment">
+                          <img src={x?.Featured_Image?.url ? (strapi_url + x.Featured_Image.url) : no_image_url} alt="" />
                         </div>
-                        <h3>{x?.Title ? x.Title : ''}</h3>
-                        <p>
-                          {x?.Description ? (x.Description.substring(0, 200) + "...") : ''}
-                        </p>
-                        <a href="#" class="button__primary"><span>Read More</span></a>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="info-wrap">
+                          <div class="date-wrap">
+                            <p>{x?.createdAt ? new Date(x.createdAt).getDate() + "/" + new Date(x.createdAt).getMonth() + "/" + new Date(x.createdAt).getFullYear() : ''}</p>
+                          </div>
+                          <h3>{x?.Title ? x.Title : ''}</h3>
+                          <p>
+                            {x?.Description ? (x.Description.substring(0, 200) + "...") : ''}
+                          </p>
+                          <a href="#" class="button__primary"><span>Read More</span></a>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                )
-              }
-            }) : ''}
+                  )
+                }
+              }) : ''}
 
-          </div>
-        </section>
-        <section class="card-box-section padding-common light-bg">
+            </div>
+          </section>
+        </> : ''}
+
+        {posts.length ? <>
+          <section class="card-box-section padding-common light-bg">
           <div class="container">
             <div class="card-box-outer">
               <div class="row">
@@ -164,14 +171,16 @@ export const Articles = () => {
 
               </div>
               <div class="button-wrap text-center">
-              { disable_btn ? <>
-              <button onClick={loadMore} class="button__primary button__primary-fill"><span>Load More</span></button>
-              </>  : ''} 
+                {disable_btn ? <>
+                  <button onClick={loadMore} class="button__primary button__primary-fill"><span>Load More</span></button>
+                </> : ''}
               </div>
             </div>
 
           </div>
         </section>
+        </> : ''}      
+        
       </main>
 
       <Footer />

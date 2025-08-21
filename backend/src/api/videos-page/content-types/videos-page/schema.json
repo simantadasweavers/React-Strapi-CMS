@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "artical_pages",
+  "collectionName": "videos_pages",
   "info": {
-    "singularName": "artical-page",
-    "pluralName": "artical-pages",
-    "displayName": "Articals Page"
+    "singularName": "videos-page",
+    "pluralName": "videos-pages",
+    "displayName": "Videos Page"
   },
   "options": {
     "draftAndPublish": true
@@ -12,14 +12,15 @@
   "pluginOptions": {},
   "attributes": {
     "Page_Title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Hero_Section": {
       "type": "component",
       "component": "shared.inner-page-hero-section",
       "repeatable": false
     },
-    "Featured_Article_Title": {
+    "Featured_Video_Title": {
       "type": "string"
     }
   }

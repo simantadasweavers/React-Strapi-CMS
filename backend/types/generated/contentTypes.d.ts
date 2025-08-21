@@ -376,7 +376,7 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
 export interface ApiArticalPageArticalPage extends Struct.SingleTypeSchema {
   collectionName: 'artical_pages';
   info: {
-    displayName: 'Artical Page';
+    displayName: 'Articals Page';
     pluralName: 'artical-pages';
     singularName: 'artical-page';
   };
@@ -616,6 +616,39 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiPodcastsPagePodcastsPage extends Struct.SingleTypeSchema {
+  collectionName: 'podcasts_pages';
+  info: {
+    displayName: 'Podcasts Page';
+    pluralName: 'podcasts-pages';
+    singularName: 'podcasts-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Featured_Podcast_Title: Schema.Attribute.String;
+    Hero_Section: Schema.Attribute.Component<
+      'shared.inner-page-hero-section',
+      false
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::podcasts-page.podcasts-page'
+    > &
+      Schema.Attribute.Private;
+    Page_Title: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPostsPosts extends Struct.CollectionTypeSchema {
   collectionName: 'posts_post';
   info: {
@@ -669,6 +702,39 @@ export interface ApiTeamPageTeamPage extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     Members: Schema.Attribute.Component<'shared.members', true>;
     Page_Title: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiVideosPageVideosPage extends Struct.SingleTypeSchema {
+  collectionName: 'videos_pages';
+  info: {
+    displayName: 'Videos Page';
+    pluralName: 'videos-pages';
+    singularName: 'videos-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Featured_Video_Title: Schema.Attribute.String;
+    Hero_Section: Schema.Attribute.Component<
+      'shared.inner-page-hero-section',
+      false
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::videos-page.videos-page'
+    > &
+      Schema.Attribute.Private;
+    Page_Title: Schema.Attribute.String & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1192,8 +1258,10 @@ declare module '@strapi/strapi' {
       'api::contact-us-page.contact-us-page': ApiContactUsPageContactUsPage;
       'api::global.global': ApiGlobalGlobal;
       'api::home-page.home-page': ApiHomePageHomePage;
+      'api::podcasts-page.podcasts-page': ApiPodcastsPagePodcastsPage;
       'api::posts.posts': ApiPostsPosts;
       'api::team-page.team-page': ApiTeamPageTeamPage;
+      'api::videos-page.videos-page': ApiVideosPageVideosPage;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
