@@ -3,6 +3,8 @@ import { Footer } from "../components/Footer"
 import { useState, useEffect } from "react";
 import parse from 'html-react-parser';
 import axiosInstance from "../Auth/Axios";
+import { Link } from "react-router-dom";
+
 
 
 export const Articles = () => {
@@ -98,14 +100,14 @@ export const Articles = () => {
         </section>
         </> : ''}
         
-        {featured_post.length ? <>
+        {featured_post?.length ? <>
           <section class="featured-section padding-common">
             <div class="container">
               <div class="section-title">
                 <h2>{data?.Featured_Article_Title ? data.Featured_Article_Title : ''}</h2>
               </div>
 
-              {featured_post.length ? featured_post.map((x, y) => {
+              {featured_post?.length ? featured_post.map((x, y) => {
                 if (x.Featured_Post) {
                   return (
                     <div class="row align-items-center">
@@ -123,7 +125,7 @@ export const Articles = () => {
                           <p>
                             {x?.Description ? (x.Description.substring(0, 200) + "...") : ''}
                           </p>
-                          <a href="#" class="button__primary"><span>Read More</span></a>
+                          <Link to={"/post/"+x.slug} class="button__primary"><span>Read More</span></Link>
                         </div>
                       </div>
                     </div>
@@ -135,12 +137,12 @@ export const Articles = () => {
           </section>
         </> : ''}
 
-        {posts.length ? <>
+        {posts?.length ? <>
           <section class="card-box-section padding-common light-bg">
           <div class="container">
             <div class="card-box-outer">
               <div class="row">
-                {posts.length ? posts.map((x, y) => {
+                {posts?.length ? posts.map((x, y) => {
                   return (
                     <div class="col-md-6 card-box-col">
                       <div class="card-box">
@@ -161,7 +163,7 @@ export const Articles = () => {
                           </p>
                         </div>
                         <div class="card-button">
-                          <a href="#" class="button__primary"><span>Read More</span></a>
+                          <Link to={"/post/"+x.slug} class="button__primary"><span>Read More</span></Link>
                         </div>
                       </div>
                     </div>

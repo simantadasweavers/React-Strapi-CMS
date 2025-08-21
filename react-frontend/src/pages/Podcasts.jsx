@@ -1,8 +1,8 @@
 import { Header } from "../components/Header"
 import { Footer } from "../components/Footer"
 import { useState, useEffect } from "react";
-import parse from 'html-react-parser';
 import axiosInstance from "../Auth/Axios";
+import { Link } from "react-router-dom";
 
 
 export const Podcasts = () => {
@@ -137,7 +137,7 @@ export const Podcasts = () => {
                           <p>
                             {x?.Description ? (x.Description.substring(0, 200) + "...") : ''}
                           </p>
-                          <a href="#" class="button__primary"><span>Read More</span></a>
+                         <Link to={"/post/"+x.slug} class="button__primary"><span>Read More</span></Link>
                         </div>
                       </div>
                     </div>
@@ -187,7 +187,7 @@ export const Podcasts = () => {
                             </p>
                           </div>
                           <div class="card-button">
-                            <a href="#" class="button__primary"><span>Read More</span></a>
+                            <Link to={"/post/"+x.slug} class="button__primary"><span>Read More</span></Link>
                           </div>
                         </div>
                       </div>

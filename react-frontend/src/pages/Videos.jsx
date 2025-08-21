@@ -1,9 +1,8 @@
 import { Header } from "../components/Header"
 import { Footer } from "../components/Footer"
 import { useState, useEffect } from "react";
-import parse from 'html-react-parser';
 import axiosInstance from "../Auth/Axios";
-
+import { Link } from "react-router-dom";
 
 export const Videos = () => {
 
@@ -134,7 +133,7 @@ export const Videos = () => {
                           <p>
                             {x?.Description ? (x.Description.substring(0, 200) + "...") : ''}
                           </p>
-                          <a href="#" class="button__primary"><span>Read More</span></a>
+                          <Link to={"/post/"+x.slug} class="button__primary"><span>Read More</span></Link>
                         </div>
                       </div>
                     </div>
@@ -146,12 +145,12 @@ export const Videos = () => {
           </section>
         </> : ''}
 
-        {posts.length ? <>
+        {posts?.length ? <>
           <section class="card-box-section padding-common light-bg">
           <div class="container">
             <div class="card-box-outer">
               <div class="row">
-                {posts.length ? posts.map((x, y) => {
+                {posts?.length ? posts.map((x, y) => {
                   return (
                     <div class="col-md-6 card-box-col">
                       <div class="card-box">
@@ -168,8 +167,6 @@ export const Videos = () => {
                             <img src={x?.Featured_Image?.url ? (strapi_url + x.Featured_Image.url) : no_image_url} alt="" />
                           </div>
                         </>}
-
-
                         <div class="date-wrap">
                           <p>
                             {x?.createdAt ? new Date(x.createdAt).getDate() + "/" + new Date(x.createdAt).getMonth() + "/" + new Date(x.createdAt).getFullYear() : ''}
@@ -184,7 +181,7 @@ export const Videos = () => {
                           </p>
                         </div>
                         <div class="card-button">
-                          <a href="#" class="button__primary"><span>Read More</span></a>
+                          <Link to={"/post/"+x.slug} class="button__primary"><span>Read More</span></Link>
                         </div>
                       </div>
                     </div>

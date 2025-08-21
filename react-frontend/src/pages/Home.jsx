@@ -224,33 +224,6 @@ export const Home = () => {
                                 <div class="slider-next-button"></div>
                             </div>
                             <div class="testimonial-slider-wraper">
-                                {/* <div class="testimonial-slider">
-                                    {data?.Testimonials?.Client_Reviews ? data.Testimonials.Client_Reviews.map((x, y) => {
-                                        return (
-                                            <div class="slider-col">
-                                                <div class="testimonial-box">
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <div class="review-wraper">
-                                                                <div class="logo-wrap"><img src={x?.Company_Logo?.url ? strapi_url+x.Company_Logo.url : no_image_url} alt="" /></div>
-                                                                <div class="profile-info">
-                                                                    <h3>{x?.Client ? parse(x.Client) : ''}</h3>
-                                                                    <p>{x?.Client_Designation ? parse(x.Client_Designation) : ''}</p>
-                                                                </div>
-                                                                <p>{x?.Feedback ? parse(x.Feedback) : ''}</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <div class="image-wraper image-adjustment"><img src={x?.Client_Profile?.url ? strapi_url+x.Client_Profile.url : no_image_url} alt="" /></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        )
-                                    }) : ''}
-
-                                </div> */}
                                 <Testimonials data={data} />
                             </div>
                         </div>

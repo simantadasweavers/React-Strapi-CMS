@@ -1,7 +1,6 @@
 import { Header } from "../components/Header"
 import { Footer } from "../components/Footer"
 import { useState, useEffect } from "react";
-import parse from 'html-react-parser';
 import axiosInstance from "../Auth/Axios";
 
 

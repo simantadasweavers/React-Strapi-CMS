@@ -8,6 +8,7 @@ import { Podcasts } from "../pages/Podcasts"
 import { Videos } from "../pages/Videos"
 import { Contact } from "../pages/Contact"
 import { ErrorPage } from "../pages/ErrorPage"
+import { PostDetails } from "../pages/PostDetails"
 
 
 export const Routing = () => {
@@ -21,6 +22,7 @@ export const Routing = () => {
             <Route path="/podcasts" element={<Podcasts />}/>
             <Route path="/videos" element={<Videos />}/>
             <Route path="/contact-us" element={<Contact />}/>
+            <Route path="/post/:slug" element={<PostDetails />}/>
             <Route path="*" element={<ErrorPage />} />
         </Routes>
     )

@@ -7,23 +7,6 @@ import { RightArrow } from "./slider-arrows/RightArrow";
 
 export const Testimonials = ({ data }) => {
 
-    // const strapi_url = import.meta.env.VITE_STRAPI_BACKEND_URL;
-    // const no_image_url = "src/assets/images/no_image.jpg";
-    // const settings = {
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1,
-    //     infinite: false,
-    //     prevArrow: '.slider-prev-button',
-    //     nextArrow: '.slider-next-button',
-    //     responsive: [
-    //         {
-    //             breakpoint: 420,
-    //             settings: {
-    //                 centerMode: false,
-    //             }
-    //         }
-    //     ]
-    // };
 
     const strapi_url = import.meta.env.VITE_STRAPI_BACKEND_URL;
     const no_image_url = "src/assets/images/no_image.jpg";
