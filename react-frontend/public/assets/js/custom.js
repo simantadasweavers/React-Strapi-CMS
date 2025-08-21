@@ -129,6 +129,3 @@ jQuery(document).ready(function () {
 });
 
 
-
-console.warn("js code");
-

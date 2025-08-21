@@ -8,11 +8,17 @@ import axiosInstance from "../Auth/Axios";
 export const Articles = () => {
 
   const [data, setData] = useState({});
-  const [posts, setPost] = useState({});
+  const [featured_post, setFeaturedPost] = useState({});
+  const [posts, setPosts] = useState({});
   const strapi_url = import.meta.env.VITE_STRAPI_BACKEND_URL;
   const no_image_url = "src/assets/images/no_image.jpg";
+  const [postnumber, setPostNumber] = useState(2);
+  const [disable_btn, setDisableBtn] = useState(true);
+
 
   useEffect(() => {
+
+    // hero section render
     const fetchData = async () => {
       const response = await axiosInstance({
         url: `${import.meta.env.VITE_STRAPI_BACKEND_URL}/api/artical-page?populate[0]=Hero_Section.Right_Float_Image&populate[1]=Hero_Section.Left_Float_Image`,
@@ -22,20 +28,53 @@ export const Articles = () => {
     }
     fetchData();
 
+    // render posts
     const fetchPosts = async () => {
       const response = await axiosInstance({
         url: `${import.meta.env.VITE_STRAPI_BACKEND_URL}/api/posts-post?filters[$and][0][category][name][$eq]=article&populate=*`,
         method: 'GET',
       });
-      setPost(response.data.data);
+      response.data.data.splice(2);
+      setPosts(response.data.data);
     }
     fetchPosts();
+
+    // featured post
+    const fetchFeaturedPost = async () => {
+      const response = await axiosInstance({
+        url: `${import.meta.env.VITE_STRAPI_BACKEND_URL}/api/posts-post?filters[$and][0][category][name][$eq]=article&populate=*`,
+        method: 'GET',
+      });
+      setFeaturedPost(response.data.data);
+    }
+    fetchFeaturedPost();
+
   }, [])
+
+  const loadMore = (e) =>{
+    e.preventDefault();
+    setPostNumber(postnumber+2);
+  }
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const response = await axiosInstance({
+        url: `${import.meta.env.VITE_STRAPI_BACKEND_URL}/api/posts-post?filters[$and][0][category][name][$eq]=article&populate=*`,
+        method: 'GET',
+      });
+      if(postnumber > response.data.data.length){
+        setDisableBtn(false);
+      }
+      response.data.data.splice(postnumber);
+      setPosts(response.data.data);
+    }
+    fetchPosts();
+  }, [postnumber])
+  
 
   return (
     <>
       <Header />
-
       <main>
         <section class="inner-banner-section light-bg">
           <div class="container">
@@ -62,7 +101,7 @@ export const Articles = () => {
               <h2>{data?.Featured_Article_Title ? data.Featured_Article_Title : ''}</h2>
             </div>
 
-            {posts.length ? posts.map((x, y) => {
+            {featured_post.length ? featured_post.map((x, y) => {
               if (x.Featured_Post) {
                 return (
                   <div class="row align-items-center">
@@ -94,9 +133,7 @@ export const Articles = () => {
           <div class="container">
             <div class="card-box-outer">
               <div class="row">
-
                 {posts.length ? posts.map((x, y) => {
-                  if (! x.Featured_Post) {
                   return (
                     <div class="col-md-6 card-box-col">
                       <div class="card-box">
@@ -122,13 +159,14 @@ export const Articles = () => {
                       </div>
                     </div>
                   )
-                }
                 }) : ''}
 
 
               </div>
               <div class="button-wrap text-center">
-                <a href="#" class="button__primary button__primary-fill"><span>Load More</span></a>
+              { disable_btn ? <>
+              <button onClick={loadMore} class="button__primary button__primary-fill"><span>Load More</span></button>
+              </>  : ''} 
               </div>
             </div>
 
