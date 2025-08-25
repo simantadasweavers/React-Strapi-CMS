@@ -13,7 +13,10 @@ jQuery(window).resize(function () {
   jQuery('.header__main').css('height', headerHeight);
 });
 
+
 jQuery(document).ready(function () {
+  
+  
   // calculate the height of the header for header sticky adjustments
   jQuery(window).ready(function () {
     let headerHeight = jQuery('.header-inner__wrapper').outerHeight();
@@ -95,29 +98,29 @@ jQuery(document).ready(function () {
 
   // case-studies-slider 
   // Initialize Slick sliders
-  jQuery('.team-tab-slider').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    infinite: false,
-    dots: false,
-    arrows: true,
-    responsive: [
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 2,
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          //  dots: true,
-          //  arrows: false,
-        }
-      }
-    ]
-  });
+  // jQuery('.team-tab-slider').slick({
+  //   slidesToShow: 3,
+  //   slidesToScroll: 1,
+  //   infinite: false,
+  //   dots: false,
+  //   arrows: true,
+  //   responsive: [
+  //     {
+  //       breakpoint: 992,
+  //       settings: {
+  //         slidesToShow: 2,
+  //       }
+  //     },
+  //     {
+  //       breakpoint: 768,
+  //       settings: {
+  //         slidesToShow: 1,
+  //         //  dots: true,
+  //         //  arrows: false,
+  //       }
+  //     }
+  //   ]
+  // });
 
   // Reinitialize Slick on tab show
   jQuery('button[data-bs-toggle="tab"]').on('shown.bs.tab', function () {
