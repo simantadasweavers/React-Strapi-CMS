@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "companies_list",
+  "info": {
+    "singularName": "companies",
+    "pluralName": "companies-list",
+    "displayName": "Companies"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Company_Name": {
+      "type": "string",
+      "required": true
+    },
+    "Company_Logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "Short_Description": {
+      "type": "text"
+    },
+    "Website_Link": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_shared_companies_company_pages",
+  "info": {
+    "displayName": "Companies ~ Company Page",
+    "icon": "paperPlane"
+  },
+  "options": {},
+  "attributes": {
+    "Logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "Short_Description": {
+      "type": "text"
+    },
+    "Website_Link": {
+      "type": "string",
+      "required": true
+    },
+    "Name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

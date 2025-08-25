@@ -469,6 +469,74 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiCompaniesPageCompaniesPage extends Struct.SingleTypeSchema {
+  collectionName: 'companies_pages';
+  info: {
+    displayName: 'Companies Page';
+    pluralName: 'companies-pages';
+    singularName: 'companies-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Hero_Section: Schema.Attribute.Component<
+      'shared.inner-page-hero-section',
+      false
+    >;
+    Listing_Section: Schema.Attribute.Component<
+      'shared.listing-section-companies-page',
+      false
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::companies-page.companies-page'
+    > &
+      Schema.Attribute.Private;
+    Page_Title: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiCompaniesCompanies extends Struct.CollectionTypeSchema {
+  collectionName: 'companies_list';
+  info: {
+    displayName: 'Companies';
+    pluralName: 'companies-list';
+    singularName: 'companies';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Company_Logo: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    Company_Name: Schema.Attribute.String & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::companies.companies'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    Short_Description: Schema.Attribute.Text;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Website_Link: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface ApiContactRequestsContactRequests
   extends Struct.CollectionTypeSchema {
   collectionName: 'contact_requests_requests';
@@ -525,6 +593,46 @@ export interface ApiContactUsPageContactUsPage extends Struct.SingleTypeSchema {
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::contact-us-page.contact-us-page'
+    > &
+      Schema.Attribute.Private;
+    Page_Title: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiFounderPageFounderPage extends Struct.SingleTypeSchema {
+  collectionName: 'founder_pages';
+  info: {
+    displayName: 'Founder Page';
+    pluralName: 'founder-pages';
+    singularName: 'founder-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Blogs_Section: Schema.Attribute.Component<
+      'shared.blogs-section-about-us',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Founder_Information: Schema.Attribute.Component<
+      'shared.founder-section-about-us',
+      false
+    >;
+    Hero_Section: Schema.Attribute.Component<
+      'shared.inner-page-hero-section',
+      false
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::founder-page.founder-page'
     > &
       Schema.Attribute.Private;
     Page_Title: Schema.Attribute.String;
@@ -675,6 +783,34 @@ export interface ApiPostsPosts extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'Title'> & Schema.Attribute.Required;
     Title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiServicesServices extends Struct.SingleTypeSchema {
+  collectionName: 'services_page';
+  info: {
+    displayName: 'services';
+    pluralName: 'services-page';
+    singularName: 'services';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::services.services'
+    > &
+      Schema.Attribute.Private;
+    Page_Title: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1256,12 +1392,16 @@ declare module '@strapi/strapi' {
       'api::artical-page.artical-page': ApiArticalPageArticalPage;
       'api::author.author': ApiAuthorAuthor;
       'api::category.category': ApiCategoryCategory;
+      'api::companies-page.companies-page': ApiCompaniesPageCompaniesPage;
+      'api::companies.companies': ApiCompaniesCompanies;
       'api::contact-requests.contact-requests': ApiContactRequestsContactRequests;
       'api::contact-us-page.contact-us-page': ApiContactUsPageContactUsPage;
+      'api::founder-page.founder-page': ApiFounderPageFounderPage;
       'api::global.global': ApiGlobalGlobal;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::podcasts-page.podcasts-page': ApiPodcastsPagePodcastsPage;
       'api::posts.posts': ApiPostsPosts;
+      'api::services.services': ApiServicesServices;
       'api::team-page.team-page': ApiTeamPageTeamPage;
       'api::videos-page.videos-page': ApiVideosPageVideosPage;
       'plugin::content-releases.release': PluginContentReleasesRelease;

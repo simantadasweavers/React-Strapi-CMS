@@ -13,6 +13,16 @@ export interface SharedAboutSection extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedBlogsSectionAboutUs extends Struct.ComponentSchema {
+  collectionName: 'components_shared_blogs_section_about_uses';
+  info: {
+    displayName: 'Blogs Section ~ About Us';
+  };
+  attributes: {
+    Section_Title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedCards extends Struct.ComponentSchema {
   collectionName: 'components_shared_cards';
   info: {
@@ -41,6 +51,21 @@ export interface SharedChooseRorhoSection extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedCompaniesCompanyPage extends Struct.ComponentSchema {
+  collectionName: 'components_shared_companies_company_pages';
+  info: {
+    displayName: 'Companies ~ Company Page';
+    icon: 'paperPlane';
+  };
+  attributes: {
+    Logo: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    Name: Schema.Attribute.String & Schema.Attribute.Required;
+    Short_Description: Schema.Attribute.Text;
+    Website_Link: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface SharedContactForm extends Struct.ComponentSchema {
   collectionName: 'components_shared_contact_forms';
   info: {
@@ -63,6 +88,19 @@ export interface SharedFooterSection extends Struct.ComponentSchema {
     Copyright_Text: Schema.Attribute.String;
     Footer_Image: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
+  };
+}
+
+export interface SharedFounderSectionAboutUs extends Struct.ComponentSchema {
+  collectionName: 'components_shared_founder_section_about_uses';
+  info: {
+    displayName: 'Founder Section ~ About Us';
+  };
+  attributes: {
+    About_Founder: Schema.Attribute.String;
+    Profile: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    Short_Description: Schema.Attribute.Text;
   };
 }
 
@@ -183,6 +221,18 @@ export interface SharedList extends Struct.ComponentSchema {
   };
   attributes: {
     List_Item: Schema.Attribute.String;
+  };
+}
+
+export interface SharedListingSectionCompaniesPage
+  extends Struct.ComponentSchema {
+  collectionName: 'components_shared_listing_section_companies_pages';
+  info: {
+    displayName: 'Listing Section ~ Companies Page';
+  };
+  attributes: {
+    Section_Title: Schema.Attribute.String;
+    Short_Description: Schema.Attribute.String;
   };
 }
 
@@ -342,10 +392,13 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'shared.about-section': SharedAboutSection;
+      'shared.blogs-section-about-us': SharedBlogsSectionAboutUs;
       'shared.cards': SharedCards;
       'shared.choose-rorho-section': SharedChooseRorhoSection;
+      'shared.companies-company-page': SharedCompaniesCompanyPage;
       'shared.contact-form': SharedContactForm;
       'shared.footer-section': SharedFooterSection;
+      'shared.founder-section-about-us': SharedFounderSectionAboutUs;
       'shared.header-section': SharedHeaderSection;
       'shared.help-boxes': SharedHelpBoxes;
       'shared.help-section': SharedHelpSection;
@@ -356,6 +409,7 @@ declare module '@strapi/strapi' {
       'shared.investment-boxes': SharedInvestmentBoxes;
       'shared.investments-section': SharedInvestmentsSection;
       'shared.list': SharedList;
+      'shared.listing-section-companies-page': SharedListingSectionCompaniesPage;
       'shared.media': SharedMedia;
       'shared.members': SharedMembers;
       'shared.negative-list': SharedNegativeList;

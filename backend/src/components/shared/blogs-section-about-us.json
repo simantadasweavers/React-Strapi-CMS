@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_blogs_section_about_uses",
+  "info": {
+    "displayName": "Blogs Section ~ About Us"
+  },
+  "options": {},
+  "attributes": {
+    "Section_Title": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "singleType",
+  "collectionName": "founder_pages",
+  "info": {
+    "singularName": "founder-page",
+    "pluralName": "founder-pages",
+    "displayName": "Founder Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Hero_Section": {
+      "type": "component",
+      "component": "shared.inner-page-hero-section",
+      "repeatable": false
+    },
+    "Founder_Information": {
+      "type": "component",
+      "component": "shared.founder-section-about-us",
+      "repeatable": false
+    },
+    "Page_Title": {
+      "type": "string"
+    },
+    "Blogs_Section": {
+      "type": "component",
+      "component": "shared.blogs-section-about-us",
+      "repeatable": false
+    }
+  }
+}

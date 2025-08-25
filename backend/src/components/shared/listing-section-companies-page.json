@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_listing_section_companies_pages",
+  "info": {
+    "displayName": "Listing Section ~ Companies Page"
+  },
+  "options": {},
+  "attributes": {
+    "Section_Title": {
+      "type": "string"
+    },
+    "Short_Description": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

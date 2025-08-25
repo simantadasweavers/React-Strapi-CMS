@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "companies_pages",
+  "info": {
+    "singularName": "companies-page",
+    "pluralName": "companies-pages",
+    "displayName": "Companies Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Page_Title": {
+      "type": "string"
+    },
+    "Hero_Section": {
+      "type": "component",
+      "component": "shared.inner-page-hero-section",
+      "repeatable": false
+    },
+    "Listing_Section": {
+      "type": "component",
+      "component": "shared.listing-section-companies-page",
+      "repeatable": false
+    }
+  }
+}

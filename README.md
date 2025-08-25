@@ -58,3 +58,61 @@ password: shi@RDF23@#$
 email: iamshimanta....
 password: shi@RDF23@#$
 ```
+
+
+
+### comoanies list
+```
+Consolidated List of Partner Organizations
+Child Education Partners
+
+EduCare Pvt. Ltd.
+BrightTech Solutions
+LearnMore Foundation
+Global Book Trust
+Future Minds Academy
+Scholarly India
+VidyaVikas Trust
+SmartStart Kids
+e-Learn Hub
+India Literacy Project
+
+Healthcare Partners
+
+HealthFirst Hospitals
+Apollo Care Outreach
+LifeWell Diagnostics
+Medico Relief Society
+HopeCare Pharma
+Smile Dental Clinics
+SafeHealth Insurance Co.
+HealWell Foundation
+Doctors Without Borders (India Chapter)
+Rural Health Trust
+
+Orphanage & Shelter Partners
+
+SafeHaven Homes
+ChildCare Foundation
+ShelterHope India
+Home of Smiles
+Rainbow Children’s Home
+Loving Arms Orphanage
+Nurture Foundation
+Sunshine Homes
+SafeNest Trust
+FamilyFirst NGO
+
+CSR / Corporate Social Responsibility Partners
+
+Tata Trusts
+Infosys Foundation
+Reliance Foundation
+Wipro Cares
+HDFC Bank Parivartan
+ICICI Foundation
+Aditya Birla Group CSR
+Godrej Good & Green
+Mahindra Rise Foundation
+TechForGood Pvt. Ltd.
+```

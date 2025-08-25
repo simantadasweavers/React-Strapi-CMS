@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_founder_section_about_uses",
+  "info": {
+    "displayName": "Founder Section ~ About Us"
+  },
+  "options": {},
+  "attributes": {
+    "Profile": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "About_Founder": {
+      "type": "string"
+    },
+    "Short_Description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}
